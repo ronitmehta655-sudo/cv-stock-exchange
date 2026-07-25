@@ -1,0 +1,608 @@
+/* ==============================
+        GOOGLE FONT
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 85px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 50px;
+
+    background: rgba(9,13,34,.85);
+    backdrop-filter: blur(20px);
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+    z-index: 1000;
+}
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:linear-gradient(-45deg,#050816,#0b1026,#141b38,#1a2554);
+    background-size:400% 400%;
+    animation:bgAnimation 15s ease infinite;
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+/* ==============================
+        Animated Background
+================================ */
+
+@keyframes bgAnimation{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
+
+/* ==============================
+        Loader
+================================ */
+
+#loader{
+
+position:fixed;
+
+width:100%;
+
+height:100vh;
+
+background:#050816;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+font-size:40px;
+
+font-weight:700;
+
+letter-spacing:4px;
+
+animation:loaderFade 3s forwards;
+
+}
+
+@keyframes loaderFade{
+
+0%{
+
+opacity:1;
+
+}
+
+90%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+visibility:hidden;
+
+}
+
+}
+
+/* ==============================
+        HEADER
+================================ */
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 60px;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(15px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#00F5FF;
+
+letter-spacing:2px;
+
+}
+
+/* ==============================
+        NAVBAR
+================================ */
+
+nav{
+
+display:flex;
+
+gap:35px;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:white;
+
+font-weight:500;
+
+position:relative;
+
+transition:.3s;
+
+}
+
+nav a::after{
+
+content:"";
+
+position:absolute;
+
+bottom:-6px;
+
+left:0;
+
+width:0;
+
+height:2px;
+
+background:#00F5FF;
+
+transition:.4s;
+
+}
+
+nav a:hover{
+
+color:#00F5FF;
+
+}
+
+nav a:hover::after{
+
+width:100%;
+
+}
+
+/* ==============================
+        SEARCH
+================================ */
+
+.search-box input{
+
+padding:12px 18px;
+
+border:none;
+
+border-radius:50px;
+
+background:rgba(255,255,255,.08);
+
+color:white;
+
+width:260px;
+
+outline:none;
+
+transition:.4s;
+
+}
+
+.search-box input::placeholder{
+
+color:#ccc;
+
+}
+
+.search-box input:focus{
+
+width:330px;
+
+box-shadow:0 0 20px #00F5FF;
+
+}
+
+/* ==============================
+        TICKER
+================================ */
+
+.ticker{
+
+margin-top:90px;
+
+background:#0b1026;
+
+overflow:hidden;
+
+padding:12px 0;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.ticker-track{
+
+display:flex;
+
+width:max-content;
+
+animation:ticker 22s linear infinite;
+
+gap:80px;
+
+font-weight:600;
+
+color:#00ff88;
+
+}
+
+@keyframes ticker{
+
+0%{
+
+transform:translateX(100%);
+
+}
+
+100%{
+
+transform:translateX(-100%);
+
+}
+
+}
+
+/* ==============================
+        HERO
+================================ */
+
+.hero{
+
+height:60vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:70px;
+
+background:linear-gradient(90deg,#00F5FF,#6A5CFF,#FF4D9D);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+margin-bottom:20px;
+
+animation:glow 3s infinite;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+color:#bfc6d9;
+
+}
+
+@keyframes glow{
+
+50%{
+
+filter:drop-shadow(0 0 25px #00F5FF);
+
+}
+
+}
+
+/* ==============================
+        DASHBOARD
+================================ */
+
+.dashboard{
+
+padding:70px;
+
+}
+
+.dashboard h2{
+
+font-size:36px;
+
+margin-bottom:35px;
+
+}
+
+/* ==============================
+        CARDS
+================================ */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+}
+
+.stock-card{
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:22px;
+
+padding:28px;
+
+backdrop-filter:blur(20px);
+
+transition:.5s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.stock-card::before{
+
+content:"";
+
+position:absolute;
+
+width:220px;
+
+height:220px;
+
+background:rgba(0,245,255,.15);
+
+border-radius:50%;
+
+top:-100px;
+
+right:-80px;
+
+transition:.5s;
+
+}
+
+.stock-card:hover{
+
+transform:translateY(-12px) scale(1.02);
+
+box-shadow:0 0 35px rgba(0,245,255,.45);
+
+border-color:#00F5FF;
+
+}
+
+.stock-card:hover::before{
+
+transform:scale(1.4);
+
+}
+
+.stock-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:20px;
+
+}
+
+.stock-header h2{
+
+font-size:24px;
+
+}
+
+.green{
+
+color:#00ff88;
+
+font-weight:700;
+
+}
+
+.red{
+
+color:#ff4d6d;
+
+font-weight:700;
+
+}
+
+.stock-card h1{
+
+font-size:52px;
+
+margin-bottom:12px;
+
+}
+
+.rating{
+
+color:#FFD700;
+
+margin-bottom:25px;
+
+font-weight:600;
+
+}
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:15px;
+
+margin-bottom:30px;
+
+}
+
+.stats div{
+
+background:rgba(255,255,255,.05);
+
+padding:15px;
+
+border-radius:14px;
+
+text-align:center;
+
+}
+
+.stats h3{
+
+font-size:14px;
+
+color:#8ca3d7;
+
+margin-bottom:6px;
+
+}
+
+.stats p{
+
+font-weight:600;
+
+}
+
+/* ==============================
+        BUTTON
+================================ */
+
+button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:50px;
+
+background:linear-gradient(90deg,#00F5FF,#6A5CFF);
+
+color:white;
+
+font-size:16px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 0 25px #00F5FF;
+
+}
+
+/* ==============================
+        FOOTER
+================================ */
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+color:#8ca3d7;
+
+}
