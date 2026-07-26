@@ -248,6 +248,8 @@ nav a:hover{
     padding:40px;
 
     border-radius:20px;
+    width:900px;
+    max-width:100%;
 
 }
 
@@ -660,8 +662,4 @@ footer p{
 .company-overview-card{
     width: 900px;       /* Current looks around 700–750px */
     max-width: 90%;
-}
-.overview-text{
-    width:900px;
-    max-width:768px;
 }
