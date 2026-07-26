@@ -661,3 +661,7 @@ footer p{
     width: 900px;       /* Current looks around 700–750px */
     max-width: 90%;
 }
+.overview-text{
+    width:900px;
+    max-width:100%;
+}
