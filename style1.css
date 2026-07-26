@@ -657,3 +657,7 @@ footer p{
 .share-card li{
     margin-bottom:10px;
 }
+.company-overview-card{
+    width: 900px;       /* Current looks around 700–750px */
+    max-width: 90%;
+}
